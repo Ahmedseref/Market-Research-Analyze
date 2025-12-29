@@ -1,5 +1,7 @@
 {
   "name": "Market Research Analyzer",
   "description": "An AI-powered app that analyzes product demand, target markets, and pricing. Users input a product, and the AI generates a detailed market research report with strategic recommendations to help them decide what, where, and to whom to sell.",
-  "requestFramePermissions": []
+  "requestFramePermissions": [
+    "geolocation"
+  ]
 }

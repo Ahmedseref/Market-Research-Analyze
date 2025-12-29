@@ -1,6 +1,8 @@
+
 export interface MarketNeed {
   region: string;
   interestLevel: string;
+  score: number; // 0-100 score for visualization
   notes: string;
 }
 
@@ -14,10 +16,23 @@ export interface TargetCustomer {
   attractiveness: string;
 }
 
+export interface SocialLink {
+  platform: string;
+  url: string;
+}
+
 export interface Competitor {
   name: string;
   strengths: string[];
   weaknesses: string[];
+  location?: string;
+  website?: string;
+  email?: string;
+  tags?: string[];
+  revenueUSD?: string;
+  employeeCount?: string;
+  socialLinks?: SocialLink[];
+  mapUri?: string;
 }
 
 export interface AnalysisReportData {
@@ -47,8 +62,8 @@ export interface Source {
 
 export interface ChartDataItem {
   label: string;
-  value: number; // A percentage value from 0 to 100 for the bar width
-  displayValue: string; // The original string to display (e.g., "$50 - $70")
-  colorClass: string; // Tailwind CSS color class
-  tooltip?: string; // Optional text for tooltips or notes
+  value: number; 
+  displayValue: string; 
+  colorClass: string; 
+  tooltip?: string; 
 }
